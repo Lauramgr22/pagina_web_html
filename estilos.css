@@ -177,6 +177,10 @@ header label{
     padding-top: 1rem;
 }
 
+.detalles .caja_contenedor .caja img{
+    height: 15rem;
+}
+
 .detalles .caja_contenedor .caja p{
     font-size: 1.3rem;
     color: #666;
