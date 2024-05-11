@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
-    --verde: #0c443a;
-    --verde_claro: #25d1b2;
+    --verde: #0c1644;
+    --verde_claro: #004AAD;
     --degradado: linear-gradient(90deg,var(--verde_claro),var(--verde));
 }
 
@@ -29,6 +29,30 @@ html{
 
 body{
     background: #f9f9f9;
+}
+
+section{
+    min-height: 100vh;
+    padding: 0 9%;
+    padding-top: 7.5rem;
+    padding-bottom: 2rem;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    border-radius: 5rem;
+    background: var(--degradado);
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    transition: all .3s linear;
+}
+
+.btn:hover{
+    transform: scale(1.1);
 }
 
 header{
@@ -76,6 +100,45 @@ header label{
     opacity: 0;
 }
 
+.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../imagenes/inicio.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.inicio .image img{
+    width: 40vh;
+    animation: float 3s linear infinite;
+}
+
+@keyframes float {
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-3.5rem);
+    }
+}
+
+.inicio .content h3{
+    font-size: 5.5rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.inicio .content h3 span{
+    color: var(--verde_claro);
+    text-transform: uppercase;
+}
+
+.inicio .content p{
+    font-size: 1.7rem;
+    color: #666;
+    padding: 1rem 0;
+}
 @media(max-width:1200px) {
     html{
         font-size: 55%;
@@ -100,6 +163,7 @@ header label{
         transform-origin: top;
         transform: scaleY(0);
         opacity: 0;
+        transition: .2s linear;
     }
 
     header .navbar a{
@@ -115,6 +179,22 @@ header label{
 
     header input:checked ~ label::before{
         content: '\f00d';
+    }
+
+    .inicio{
+        flex-flow: column-reverse;
+    }
+
+    .inicio .image img{
+        width: 100%;
+    }
+
+    .inicio .content h3{
+        font-size: 3.6rem;
+    }
+
+    .inicio .content p{
+        font-size: 1.5rem;
     }
 }
 
