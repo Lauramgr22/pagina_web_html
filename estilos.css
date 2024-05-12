@@ -399,6 +399,76 @@ header label{
     font-size: 2rem
 }
 
+.contactanos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 4rem;
+}
+
+.contactanos .image{
+    flex: 1 1 40rem;
+}
+
+.contactanos .image img{
+    width: 100%;
+    padding: 2rem;
+}
+
+.contactanos form{
+    flex: 1 1 40rem;
+    padding: 2rem 3rem;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    background: white;
+}
+
+.contactanos .heading{
+    text-align: left;
+    padding: 0;
+    padding-bottom: 2rem;
+}
+
+.contactanos form .input_caja{
+    position: relative;
+}
+
+.contactanos form .input_caja input, .contactanos .input_caja textarea{
+    width: 100%;
+    background: none;
+    color: #333;
+    margin: 1.5rem 0;
+    padding: .5rem 0;
+    font-size: 1.7rem;
+    border-bottom: .1rem solid rgba(0, 0, 0, .1);
+    text-transform: none;
+}
+
+.contactanos form .input_caja textarea{
+    resize: none;
+    height: 13rem;
+}
+
+.contactanos form .input_caja label{
+    position: absolute;
+    top:1.7rem;
+    left: 0;
+    font-size: 1.7rem;
+    color:#666;
+    transition: .2s linear;
+}
+
+.contactanos form .input_caja input:focus ~ label,
+.contactanos form .input_caja input:valid ~ label,
+.contactanos form .input_caja textarea:focus ~label,
+.contactanos form .input_caja textarea:valid ~label{
+    top: -.5rem;
+    font-size: 1.5rem;
+    color: var(--verde_claro);
+}
+
 @media(max-width:1200px) {
     html{
         font-size: 55%;
